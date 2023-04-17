@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+Confugurando altura como 100% da viewport vertical (vh), largura como 100% da viewport horizontal (vw) e cor de fundo do html e do body
+*/
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+/*
+Inseriremos agora a imagem de fundo da viewport do projeto "fundo-madeira" que deve ser aplicado dentro do coro (body) do projeto. em seguida para que a imagem tenha um tamanho ideal para caber dentro da tela usa-se o comando background-size: cover;, e logo após a imagem deve ser fixada pela propriedade background-attachaent: fixed;.
+*/
+
+body{
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Configurando o campo main tendo altura com 100% da viewport (height: 100vh) e a posição do campo main como relativo através da propriedade position: relative. Esta configuração pela propriedade position torna-se obrigatório porque dentro do campo main tem dois campos que ocuparão posições específicas nele, como o campo section#telefone e o campo section#redes-sociais.*/
+
+main{
+    position: relative;
+    height: 100vh;
+}
+
+/*
+Configurando o seletor "section#telefone". A primeira configuração é a posição do telefonte dentro do main. Esta configuração é feita pela propriedade paition: absolute. As propriedades top e left definem a posição onde irá se situar o vértice superior esquerdo da imagem que será inserido dentro do main. Estes dois parâmetros a 50% estão colocando o vértice superior esquerdo da imagem no centro do campo mais, e portanto, o centro da imagem não ficará no centro. Para corrigir isto usa-se a propriedade transform: translate com os seus parâmetros, x e y com valores de -50%. Estes dois valores estão relacionados ao centro da figura, e tende colocar o centro da figura no centro do bloco main.
+*/
+
+section#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*
+    Outra cisa que recis ser observado é as dimensões da imagem, para não ficar desproporcionais a sua camada não vista aqui na css. Para definir a altura (height) e a largura (width) da imagem, abra a imagem com o "Gimp" e clique em propriedades da imagem, e veja, lá, qual é a altura e a largura da imagem para colocar estes valores reais na propriedade altura (height) e largura (width) da css.
+    */
+
+    height: 627px;
+    width: 311px;
+    
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+/*
+Por fim deve-se inserir a imagem do telefone atavés da propriedade background: url() e definí-la para que não repita a imagem dentro do bloco main pela propriedade no-repeat.
+*/
