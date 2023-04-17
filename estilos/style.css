@@ -54,3 +54,11 @@ section#telefone{
 /*
 Por fim deve-se inserir a imagem do telefone atavés da propriedade background: url() e definí-la para que não repita a imagem dentro do bloco main pela propriedade no-repeat.
 */
+
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
