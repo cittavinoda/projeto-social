@@ -43,7 +43,7 @@ section#telefone{
     transform: translate(-50%, -50%);
 
     /*
-    Outra cisa que recis ser observado é as dimensões da imagem, para não ficar desproporcionais a sua camada não vista aqui na css. Para definir a altura (height) e a largura (width) da imagem, abra a imagem com o "Gimp" e clique em propriedades da imagem, e veja, lá, qual é a altura e a largura da imagem para colocar estes valores reais na propriedade altura (height) e largura (width) da css.
+    Outra coisa que recis ser observado é as dimensões da imagem, para não ficar desproporcionais a sua camada não vista aqui na css. Para definir a altura (height) e a largura (width) da imagem, abra a imagem com o "Gimp" e clique em propriedades da imagem, e veja, lá, qual é a altura e a largura da imagem para colocar estes valores reais na propriedade altura (height) e largura (width) da css.
     */
 
     height: 627px;
@@ -61,4 +61,22 @@ iframe#tela{
     left: 22px;
     width: 269px;
     height: 471px;
+}
+
+section#redes-sociais{
+    text-align: right;
+} /*Define a posição dos ícones das redes sociais no lado direito da página*/
+
+section#redes-sociais img{
+    width: 50px; /*define o tamanho das imagens dos lotipos das redes sociais*/
+    margin: 10px; /*Define o espaçamento entre as logotipos das redes sociais*/
+    border-radius: 50%; /*Arredonda as bordas das logotipos das redes sociais*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.414); /*Define uma sombra nas logotipo das redes sociais*/
+    box-sizing: border-box; /*Faz com que a borda faça parte do box*/
+}
+section#redes-sociais img:hover{
+    border: 3px solid rgba(255, 255, 255, 0.639); /*Define a borda e a cor da borda em torno das logos das redes sociais*/
+    transform: translate(-3px, -3px); /*Define um novo espaço para as logos se situarem quando passar o mouse sobre elas*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.627); /*Define uma sombra em torno das logos quando se passar o mouse sobre as logos*/
+    transition: transform .5s, border 2s; /*Define o tempo em que a logo irá sair da sua posição original até a nova posição e o tempo em que a borda em torno das logos irão se manifestar.*/
 }
